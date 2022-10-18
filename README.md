@@ -7,7 +7,7 @@ This can be used to reproduce a SonarQube / Sonarscanner bug that breaks the bui
 When building this with the usual `dotnet build` everything compiles just fine.
 But when I run `begin` of the sonar scanner first,
 
-> dotnet C:\Users\bitboonk\.nuget\packages\dotnet-sonarscanner\5.5.3\tools\net5.0\any\SonarScanner.MSBuild.dll begin /k:my.key /n:"My Title" /v:1.1.0-sonarqube-sourcegenerator.1 /d:sonar.host.url=https://my.website.com /d:sonar.login=MyLogin /d:sonar.password=MyPassword /d:sonar.coverageReportPaths=c:\source\repos\github\bitbonk\NetEscapades.EnumGenerators\artifacts\test-results\sonarqube\SonarQube.xml /d:sonar.links.homepage=https://my.selfhosted.sonarqube.com/tfs/Foo/Bar/_git/NetEscapades.EnumGenerators
+> dotnet C:\Users\bitbonk.nuget\packages\dotnet-sonarscanner\5.5.3\tools\net5.0\any\SonarScanner.MSBuild.dll begin /k:my.key /n:"My Title" /v:1.1.0-sonarqube-sourcegenerator.1 /d:sonar.host.url=https://my.website.com /d:sonar.login=MyLogin /d:sonar.password=MyPassword /d:sonar.coverageReportPaths=c:\source\repos\github\bitbonk\NetEscapades.EnumGenerators\artifacts\test-results\sonarqube\SonarQube.xml /d:sonar.links.homepage=https://my.selfhosted.sonarqube.com/Foo/Bar/_git/NetEscapades.EnumGenerators
 
 a subsequent `dotnet build` will fail.
 
